@@ -25,6 +25,20 @@ class DnD_App_ExampleTests: XCTestCase {
         // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
         // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
     }
+    
+    func testValidPathForURL() {
+        let dndapi = DnDEndpoints()
+        let pathToTest = "/wowza"
+        
+        let expectedURLString = "https://www.dnd5eapi.co/wowza"
+        
+        do {
+            let urlToTest = try dndapi.urlWithPath(pathString: pathToTest)
+            XCTAssertEqual(urlToTest.description, expectedURLString)
+        } catch {
+            XCTFail("Should not throw error")
+        }
+    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
