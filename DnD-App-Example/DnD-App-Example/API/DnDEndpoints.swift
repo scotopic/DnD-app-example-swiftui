@@ -72,4 +72,39 @@ struct DnDEndpoints {
         let (data, _) = try await urlSession.data(from: url)
         return try jsonDecoder.decode(SpellDetailsResponse.self, from: data)
     }
+    
+    /*
+     GET /api/classes/{index}/levels/{spell_level}/spells
+     {
+       "count": 4,
+       "results": [
+         {
+           "index": "banishment",
+           "name": "Banishment",
+           "url": "/api/spells/banishment"
+         },
+         {
+           "index": "death-ward",
+           "name": "Death Ward",
+           "url": "/api/spells/death-ward"
+         },
+         {
+           "index": "guardian-of-faith",
+           "name": "Guardian of Faith",
+           "url": "/api/spells/guardian-of-faith"
+         },
+         {
+           "index": "locate-creature",
+           "name": "Locate Creature",
+           "url": "/api/spells/locate-creature"
+         }
+       ]
+     }
+     */
+    func spellLevelsDetails(classIndex: String, spellLevel: String) async throws -> CharacterSpellsResponse {
+        let url = try urlWithPath(pathString: "/api/classes/\(classIndex)/levels/\(spellLevel)/spells")
+        
+        let (data, _) = try await urlSession.data(from: url)
+        return try jsonDecoder.decode(CharacterSpellsResponse.self, from: data)
+    }
 }

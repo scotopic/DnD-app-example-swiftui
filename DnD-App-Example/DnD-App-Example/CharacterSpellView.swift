@@ -53,7 +53,11 @@ struct CharacterSpellView: View {
         .searchable(text: $query)
         .onChange(of: query) { newQuery in
             Task {
-                await spellsModel.search(matching: query)
+                // 1 - search by string
+//                spellsModel.search(matching: newQuery)
+                // OR
+                // 2 - ROUGH: search by spell level (1-9)
+                await spellsModel.searchLevel(classIndex: characterClass.index, level: newQuery)
             }
         }
         .task {

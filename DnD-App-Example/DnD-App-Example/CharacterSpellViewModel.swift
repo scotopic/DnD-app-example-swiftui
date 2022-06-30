@@ -65,4 +65,40 @@ class CharacterSpellViewModel: ObservableObject {
         
         return CharacterSpellsResponse(count: 0, results: found)
     }
+    
+    func searchLevel(classIndex: String, level: String) async {
+        
+        let endpoint = DnDEndpoints()
+        var charSpellsResponse: CharacterSpellsResponse
+        
+        do {
+            charSpellsResponse = try await endpoint.spellLevelsDetails(classIndex: classIndex, spellLevel: level)
+        } catch {
+            self.result = .failure(error)
+            return
+        }
+        
+        let querySpellsForLevel: [String] = charSpellsResponse.results.map { $0.index }
+        
+        
+        if level.isEmpty {
+            self.result = .success(self.cache)
+        } else {
+            self.result = .success(searchLevel(spellResponse: self.cache, query: querySpellsForLevel))
+        }
+    }
+    
+    func searchLevel(spellResponse: CharacterSpellsResponse, query: [String]) -> CharacterSpellsResponse {
+        var found: [CharacterSpell] = []
+        let spells: [CharacterSpell] = spellResponse.results
+        
+        for spell in query {
+            let foundSpells: [CharacterSpell] = spells.filter { $0.index.contains(spell) }
+            if !foundSpells.isEmpty {
+                found.append(foundSpells.first!)
+            }
+        }
+        
+        return CharacterSpellsResponse(count: 0, results: found)
+    }
 }
