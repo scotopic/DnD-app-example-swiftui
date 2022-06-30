@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		BB504CF22868AB8D00141AC1 /* DnD_App_ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB504CF12868AB8D00141AC1 /* DnD_App_ExampleApp.swift */; };
-		BB504CF42868AB8D00141AC1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB504CF32868AB8D00141AC1 /* ContentView.swift */; };
+		BB504CF42868AB8D00141AC1 /* CharacterClassListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB504CF32868AB8D00141AC1 /* CharacterClassListView.swift */; };
 		BB504CF62868AB8F00141AC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB504CF52868AB8F00141AC1 /* Assets.xcassets */; };
 		BB504CF92868AB8F00141AC1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB504CF82868AB8F00141AC1 /* Preview Assets.xcassets */; };
 		BB504D032868AB9000141AC1 /* DnD_App_ExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB504D022868AB9000141AC1 /* DnD_App_ExampleTests.swift */; };
 		BB504D0D2868AB9000141AC1 /* DnD_App_ExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB504D0C2868AB9000141AC1 /* DnD_App_ExampleUITests.swift */; };
 		BB504D0F2868AB9000141AC1 /* DnD_App_ExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB504D0E2868AB9000141AC1 /* DnD_App_ExampleUITestsLaunchTests.swift */; };
+		BBA393292868F42A00B7A61E /* CharacterSpellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA393282868F42A00B7A61E /* CharacterSpellView.swift */; };
+		BBDBCA78286A815400D470BD /* CharacterClassListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDBCA77286A815400D470BD /* CharacterClassListViewModel.swift */; };
+		BBDBCA7A286A8D0700D470BD /* SpellDescriptionVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDBCA79286A8D0700D470BD /* SpellDescriptionVIew.swift */; };
+		BBDBCA7C286A8D7000D470BD /* CharacterSpellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDBCA7B286A8D7000D470BD /* CharacterSpellViewModel.swift */; };
+		BBDBCA7E286A91F200D470BD /* SpellDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDBCA7D286A91F200D470BD /* SpellDetailsViewModel.swift */; };
+		BBDBCA80286A961C00D470BD /* DnDEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBDBCA7F286A961C00D470BD /* DnDEndpoints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +42,7 @@
 /* Begin PBXFileReference section */
 		BB504CEE2868AB8D00141AC1 /* DnD-App-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DnD-App-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB504CF12868AB8D00141AC1 /* DnD_App_ExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DnD_App_ExampleApp.swift; sourceTree = "<group>"; };
-		BB504CF32868AB8D00141AC1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BB504CF32868AB8D00141AC1 /* CharacterClassListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterClassListView.swift; sourceTree = "<group>"; };
 		BB504CF52868AB8F00141AC1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BB504CF82868AB8F00141AC1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BB504CFE2868AB9000141AC1 /* DnD-App-ExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DnD-App-ExampleTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +50,12 @@
 		BB504D082868AB9000141AC1 /* DnD-App-ExampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DnD-App-ExampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB504D0C2868AB9000141AC1 /* DnD_App_ExampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DnD_App_ExampleUITests.swift; sourceTree = "<group>"; };
 		BB504D0E2868AB9000141AC1 /* DnD_App_ExampleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DnD_App_ExampleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BBA393282868F42A00B7A61E /* CharacterSpellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSpellView.swift; sourceTree = "<group>"; };
+		BBDBCA77286A815400D470BD /* CharacterClassListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterClassListViewModel.swift; sourceTree = "<group>"; };
+		BBDBCA79286A8D0700D470BD /* SpellDescriptionVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellDescriptionVIew.swift; sourceTree = "<group>"; };
+		BBDBCA7B286A8D7000D470BD /* CharacterSpellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSpellViewModel.swift; sourceTree = "<group>"; };
+		BBDBCA7D286A91F200D470BD /* SpellDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpellDetailsViewModel.swift; sourceTree = "<group>"; };
+		BBDBCA7F286A961C00D470BD /* DnDEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DnDEndpoints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,7 +107,13 @@
 			isa = PBXGroup;
 			children = (
 				BB504CF12868AB8D00141AC1 /* DnD_App_ExampleApp.swift */,
-				BB504CF32868AB8D00141AC1 /* ContentView.swift */,
+				BBDBCA81286A962300D470BD /* API */,
+				BB504CF32868AB8D00141AC1 /* CharacterClassListView.swift */,
+				BBDBCA77286A815400D470BD /* CharacterClassListViewModel.swift */,
+				BBA393282868F42A00B7A61E /* CharacterSpellView.swift */,
+				BBDBCA7B286A8D7000D470BD /* CharacterSpellViewModel.swift */,
+				BBDBCA79286A8D0700D470BD /* SpellDescriptionVIew.swift */,
+				BBDBCA7D286A91F200D470BD /* SpellDetailsViewModel.swift */,
 				BB504CF52868AB8F00141AC1 /* Assets.xcassets */,
 				BB504CF72868AB8F00141AC1 /* Preview Content */,
 			);
@@ -125,6 +143,14 @@
 				BB504D0E2868AB9000141AC1 /* DnD_App_ExampleUITestsLaunchTests.swift */,
 			);
 			path = "DnD-App-ExampleUITests";
+			sourceTree = "<group>";
+		};
+		BBDBCA81286A962300D470BD /* API */ = {
+			isa = PBXGroup;
+			children = (
+				BBDBCA7F286A961C00D470BD /* DnDEndpoints.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,8 +283,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB504CF42868AB8D00141AC1 /* ContentView.swift in Sources */,
+				BBDBCA7A286A8D0700D470BD /* SpellDescriptionVIew.swift in Sources */,
+				BBDBCA7E286A91F200D470BD /* SpellDetailsViewModel.swift in Sources */,
+				BB504CF42868AB8D00141AC1 /* CharacterClassListView.swift in Sources */,
 				BB504CF22868AB8D00141AC1 /* DnD_App_ExampleApp.swift in Sources */,
+				BBDBCA78286A815400D470BD /* CharacterClassListViewModel.swift in Sources */,
+				BBA393292868F42A00B7A61E /* CharacterSpellView.swift in Sources */,
+				BBDBCA7C286A8D7000D470BD /* CharacterSpellViewModel.swift in Sources */,
+				BBDBCA80286A961C00D470BD /* DnDEndpoints.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
